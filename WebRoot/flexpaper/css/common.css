@@ -1,0 +1,473 @@
+@charset "utf-8";
+html body{
+	font-family: Microsoft YaHei, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 24px;
+	color:#4f4f4f;
+}
+a{
+	text-decoration:none;
+	color:#00759b;
+}
+.col{
+	color:#ee8212;
+	font-size:30px;
+	font-weight:normal;
+}
+#slides {
+	display: block;
+	width: 610px;
+	height: 180px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: relative
+}
+#slides li {
+	display: block;
+	width: 100%;
+	height: 100%;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: absolute
+}
+#slides li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-indent: -9999px
+}
+#pagination {
+	display: block;
+	list-style: none;
+	position: relative;
+	left: 95%;
+	top: -25px;
+	z-index: 800;
+	padding: 5px 15px 5px 0;
+	margin: 0
+}
+#pagination li {
+	display: block;
+	width: 8px;
+	height: 8px;
+	float: left;
+	margin-left: 15px;
+	background:url(../images/quan_white.png) no-repeat;
+}
+#pagination li a {
+	display: block;
+	padding: 0;
+	margin: 0;
+	text-indent: -9999px;
+}
+#pagination li.current {
+	background: url(../images/quan_yellow.png) no-repeat;
+}
+.fmAir{
+	font-family:Arial, Helvetica, sans-serif;
+}
+.header{
+	width:960px;
+	margin:0 auto;
+}
+.topLogin{
+	height:30px;
+	text-align:right;
+	line-height:30px;
+}
+.topLogin a{
+	margin-left:15px;
+}
+.seaMain{
+	background:#f38120;
+}
+.navcont{
+	overflow:hidden;
+	width:960px;
+	margin:0 auto;
+	padding:20px 0;
+}
+.inputDiv{
+	height:40px;
+	width:500px;
+	background:#fff;
+	border:1px solid #CACBCC;
+}
+.inputDiv input{
+	width:450px;
+	height:38px;
+	border:none;
+	padding-left:5px;
+}
+.navSea{
+	width:700px;
+	float:left;
+}
+.logo{
+	width:240px;
+	float:left;
+}
+.navDiv{
+	background:#DBDCDD;
+}
+.nav{
+	width:960px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.nav li{
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+}
+.nav li a{
+	padding:10px 25px;
+	display:block;
+}
+.nav li a:hover{
+	background:#fff;
+}
+.bannerDiv{
+	width:960px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.banner{
+	width:610px;
+	height:180px;
+	float:left;
+	position:relative;
+}
+.slogan{
+	width:330px;
+	float:left;
+	height:170px;
+	background:#f38120;
+	padding:5px 10px;
+}
+.search{
+	height:91px;
+	background:url(../images/searcgBg.gif) repeat-x;
+}
+.searchCont{
+	width:960px;
+	margin:0 auto;
+	text-align:center;
+	padding-top:25px;
+}
+.searchCont input[type="text"]{
+	width:630px;
+	height:36px;
+	margin-right:-1px;
+	padding-left:8px;
+}
+.searchCont a{
+	padding:9px 50px;
+	text-align:center;
+	background:url(../images/searButBg.png) repeat-x;
+	border:1px solid #e9500b;
+	color:#fff;
+	font-size:14px;
+	font-weight:bold;
+}
+.contBody{
+	background:#F6F6F6;
+	padding-bottom:40px;
+	padding-top:20px;
+}
+.main{
+	width:960px;
+	overflow:hidden;
+	margin:0 auto 15px auto;
+	background:url(../images/mainBg.gif) repeat-y;
+}
+.mainSec{
+	width:960px;
+	overflow:hidden;
+	margin:0 auto;
+	background:#fff;
+	padding-bottom:30px;
+}
+.navLeft{
+	width:295px;
+	float:left;
+	background:#fff;
+}
+.titH1{
+	height:35px;
+	background:url(../images/h1Bg.png) no-repeat;
+	padding-left:15px;
+	line-height:35px;
+	font-size:16px;
+	color:#000;
+}
+.classifyList li{
+	margin:10px 15px;
+	border-bottom:1px solid #eee;
+	padding-bottom:3px;
+}
+.contRight{
+	width:650px;
+	float:right;
+	background:#fff;
+}
+.part{
+	width:272px;
+	height:170px;
+	margin-left:10px;
+	border:1px solid #eee;
+	padding:8px 15px;
+	float:left;
+	margin-bottom:10px;
+}
+.part h1{
+	font-size:14px;
+	margin-bottom:5px;
+}
+.borderImg{
+	border-right:1px solid #e1e1e1;
+	border-bottom:1px solid #e1e1e1;
+	box-shadow:0px 4px 4px #dcdada;
+}
+.contList{
+	margin:5px 15px;
+	border:1px solid #eee;	
+	line-height:22px;
+	padding:12px;
+}
+.contList h1{
+	background:url(../images/spot.gif) no-repeat center left;
+	padding-left:10px;
+}
+.contList p{
+	padding-left:10px;
+}
+.footer{
+	background:#fff;
+	overflow:hidden;
+	width:960px;
+	margin:0 auto;
+}
+.footCouse{
+	width:50px;
+	float:left;
+	padding:10px;
+}
+.footCont{
+	width:860px;
+	float:right;
+	margin-top:10px;
+	text-align:right;
+	padding-right:15px;
+}
+.titTr td{
+	font-size:14px;
+	color:#0081cb;
+	padding-bottom:10px;
+}
+.contTr td{
+	font-family:Arial, Helvetica, sans-serif;
+}
+.blockP{
+	overflow:hidden;
+	height:30px;
+}
+.blockP span{
+	display:block;
+	float:left;
+	margin-right:3px;
+}
+.pridDetalCont{
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:30px;
+}
+.ico{
+	color:#FFF;
+	padding:6px 15px 6px 32px;
+	margin-right:5px;
+}
+.ico_do{
+	background:#ee8212 url(../images/ico/ico15.png) no-repeat 10px center;}
+.ico_doin{
+	background:#ee8212 url(../images/ico/ico15.png) no-repeat 10px center;}
+.ico_cart{
+	background:#ee8212 url(../images/ico/ico14.png) no-repeat 10px center;}
+.ico_recommed{
+	background:#ee8212 url(../images/ico/ico16.png) no-repeat 10px center;}
+.ico_collection{
+	background:#ee8212 url(../images/ico/ico13.png) no-repeat 10px center;}
+.ico_reading{
+	background:#ee8212 url(../images/ico/ico-reading.png) no-repeat 10px center;}
+.ico_infor{
+	background:#ee8212 url(../images/ico/infor.png) no-repeat 10px center;}
+.h1Tit{
+	font-size:14px;
+	color:#000;
+	margin-bottom:5px;
+}
+.borBot{
+	border-bottom:1px solid #e0e0e0;
+	padding-left:5px;
+}
+.block{
+	margin-bottom:15px;
+	margin-left:5px;
+	overflow:hidden;
+}
+.orging{
+	padding:3px 15px;
+	color:#fff;
+	background:#ee8212;
+	margin-right:15px;
+}
+/*epub开始*/
+.flexCont{
+	width:958px;
+	margin:0 auto;
+	overflow:hidden;
+	border:1px solid #ddd;
+	border-top:none;
+}
+.flexpaper_viewer_wrap{
+	width:750px;
+	float:left;
+	border-right:1px solid #ddd;
+}
+.flexpaper_viewer_wrap p{
+	font-family:Arial, Helvetica, sans-serif;
+	margin:15px;
+}
+.flexImg{
+	float:left;
+	width:20px;
+	margin-top:10px;
+}
+.flexRight{
+	width:170px;
+	height:500px;
+	float:left;
+	padding:4px 10px 4px 0;
+}
+.flexRight h1{
+	font-size:14px;
+	font-weight:bold;
+	margin-bottom:10px;
+}
+.flexRight li a{
+	color:#666;
+}
+.flexRight li a:hover{
+	color:#0081cb;
+}
+.flexRight li{
+	margin-bottom:15px;
+	line-height:18px;
+	border-bottom:1px dashed #ddd;
+	font-weight:bold;
+}
+div#documentViewer{
+	border:none !important ;
+}
+.flexTit{
+	width:960px;
+	margin:0 auto;
+	height:70px;
+	background:#f0f0f0;
+	overflow:hidden;
+	border-bottom:1px solid #ccc;
+}
+.fixednav{position:fixed;top:0px;left:50%;width:960px;margin-left:-480px;}
+
+.flexTit li{
+	float:left;
+	padding-left:15px;
+	padding-right:10px;
+	
+	padding-top:12px;
+}
+.flexTit li img{
+	vertical-align:middle;
+}
+
+.flexTit .flexSea input{
+	border-right:none;
+	height:17px;
+	border:1px solid #ee8212;
+	padding-left:3px;
+	vertical-align:middle;
+}
+.flexTit .flexPage{
+	color:#ee8212;
+}
+.flexTit .flexPage input{
+	border:1px solid #ee8212;
+	width:40px;
+	text-align:center;
+}
+.flexTit li .det{
+	background:#ee8212 url(../images/ico/img/det.png) no-repeat 5px center;
+	padding:4px 10px 4px 15px;
+	color:#fff;
+}
+.flexTit .flexTake{
+	position:absolute;
+	width:350px;
+	background:#fff;
+	border:1px solid #ccc;
+	clear:both;
+	z-index:1;
+	margin-left:-20px;
+	opacity:0.9;
+	padding-bottom:30px;
+	display:none;
+}
+.flexTit .flexTake h1{
+	text-align:center;
+	font-size:16px;
+	font-weight:bold;
+}
+.flexTit .flexTake li{
+	border-bottom:1px dashed #ccc;
+	float:none;
+	margin-bottom:20px;
+}
+.flexTit .flexTake li p{
+	line-height:20px;
+}
+.flexTit .flexTake li .tr a{
+	color:#000;
+}
+.flexTake .ml20 p{
+	line-height:25px;
+}
+.printIpu{
+	height:22px;
+	border-right:none;
+	border:1px solid #ccc;
+	vertical-align:top;
+}
+.flexPop{
+	width:500px;
+	height:300px;
+	position:absolute;
+	z-index:1;
+	top:180px;
+	left:50%;
+	margin-left:-350px;
+	border:1px solid #ccc;
+	background:#fff;
+	opacity:0.9;
+	display:none;
+}
+.a_det{
+	height:40px;
+	text-align:right;
+	padding:5px 8px 0 0;
+}
+.flexA{
+	margin-left:-3px;
+}
+
+/*epub结束*/

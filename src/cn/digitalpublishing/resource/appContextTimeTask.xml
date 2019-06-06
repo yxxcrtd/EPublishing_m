@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean autowire="no" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="triggerIndexNewest" /><!-- 首页最新资源 -->
+			</list>
+		</property>
+	</bean>
+
+	<!-- 首页最新资源 -->
+	<bean id="triggerIndexNewestListener" class="cn.digitalpublishing.thread.TriggerIndexNewestListener" scope="singleton"></bean>
+	<bean id="triggerIndexNewestTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="triggerIndexNewestListener" />
+		</property>
+		<property name="targetMethod">
+			<value>writeRedis</value>
+		</property>
+	</bean>
+	<bean id="triggerIndexNewest" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="triggerIndexNewestTask" />
+		</property>
+		<property name="cronExpression">
+			<value>0 20 8-18/2 ? * MON-FRI</value>
+		</property>
+	</bean>
+	
+</beans>

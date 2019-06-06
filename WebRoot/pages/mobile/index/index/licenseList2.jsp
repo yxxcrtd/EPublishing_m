@@ -1,0 +1,48 @@
+<%@ page language="java" pageEncoding="UTF-8"%>
+<%@ include file="/common/taglibs.jsp"%>
+<script type="text/javascript">
+/* 	function toNewsList(){
+		window.location.href="${ctx}/pages/publications/lastPubs?news=true";
+	}; */
+</script>
+<h1 class="underH1">
+             <ingenta-tag:LanguageTag key="Global.Label.New_Resources" sessionKey="lang"/>
+        </h1>
+		<c:if test="${list!=null&&fn:length(list)>0 }">
+		<c:forEach items="${list}" var="p" varStatus="index">
+		<c:set var="license">${(p.publications.subscribedIp!=null||p.publications.subscribedUser!=null)&&(p.publications.subscribedIp>0||p.publications.subscribedUser>0) }</c:set>
+		<c:set var="oa">${p.publications.oa!=null&&p.publications.oa==2 }</c:set>
+		<c:set var="free">${p.publications.free!=null&&p.publications.free==2 }</c:set>
+				<div class="mb20 fontFam oh">
+        			<div class="w22 fl">
+	                    <c:if test="${p.publications.type==1}"><img width="13" height="13" src="${ctx}/images/ico/ico4.png" title="<ingenta-tag:LanguageTag key="Pages.Index.Lable.Book" sessionKey="lang" />" /></c:if>
+						<c:if test="${p.publications.type==4 || p.publications.type==2}"><img width="13" height="13" src="${ctx}/images/ico/ico5.png" title="<ingenta-tag:LanguageTag key="Pages.Index.Lable.Article" sessionKey="lang" />" /></c:if>
+					
+	               	</div>
+                     <div class="fl wid90">
+	                    <h2>
+	                    <a class="a_title" data-ajax="false" title="${p.publications.title}" href="${ctx}/mobile/pages/publications/form/article/${p.publications.id}">
+	                		${fn:replace(fn:replace(fn:replace(p.publications.title,"&lt;","<"),"&gt;",">"),"&amp;","&")}
+	                	</a>
+	                	</h2>
+	                	<c:if test="${not empty p.publications.author}">
+					<p>
+						By
+						<c:set var="authors" value="${fn:split(p.publications.author,',')}"></c:set>
+						<c:forEach items="${authors}" var="a">
+							${a}&nbsp;
+			                </c:forEach>
+					</p>
+				</c:if>
+				<c:if test="${not empty p.publications.publisher.name}">
+							<p>${p.publications.publisher.name}<c:if
+									test="${not empty fn:substring(p.publications.pubDate,0,4)}">(${fn:substring(p.publications.pubDate,0,4) })</c:if>
+							</p>
+						</c:if>
+                    </div>
+                </div>
+		</c:forEach>
+		</c:if>
+<c:if test="${list==null||fn:length(list)<=0 }">
+	<ingenta-tag:LanguageTag key="Global.Label.Prompt.No.Product" sessionKey="lang"/>
+</c:if>	
